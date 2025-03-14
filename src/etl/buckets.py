@@ -54,7 +54,7 @@ def download_data_for_cryptos():
         for data_year in data_years:
             year = data_year[1]
             local_file = f"{crypto_name}_historical_data_{year}.csv"
-            object_name = f"{cryptos[crypto_name].strip('USD')}/{year}/{local_file}"
+            object_name = f"symbol={cryptos[crypto_name].removesuffix('USD') }/year={year}/{local_file}"
             
             data_year[0].to_csv(local_file)
             upload_to_s3(s3_client, BUCKET_NAME, local_file, object_name)
