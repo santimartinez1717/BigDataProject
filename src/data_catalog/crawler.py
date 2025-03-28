@@ -46,7 +46,7 @@ def start_glue_crawler(crawler_name):
 
 if __name__ == "__main__":
     grupo = "imat3b08"
-    quality = "silver"
+    quality = "gold"
     database_name = f"trade_data_{grupo}_{quality}"
     iam_role = "arn:aws:iam::911167885971:role/AWSGlueServiceRoleForCrypto"
     bucket_name = f"crypto-historical-data-bucket-{quality}"
